@@ -1,0 +1,36 @@
+.fa {
+  margin: 0px 20px;
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  background: #e0e0eb;
+  color: black;
+}
+
+.fa-facebook {
+  padding: 8px 11px 14px 11px; 
+}
+
+.fa-soundcloud {
+  padding: 7px 16px 15px 6px;
+}
+
+#close-menu .fa, #open-menu .fa {
+  color: #e0e0eb;
+  background-color: transparent;
+  font-size: 36px; 
+  margin-left: 3px;
+}
+
+@media(max-width: 600px) { 
+
+  .fa-facebook {
+    padding: 10px 13px 16px 13px; 
+  }
+
+  .fa-soundcloud {
+    padding: 9px 18px 17px 8px;
+  }
+}

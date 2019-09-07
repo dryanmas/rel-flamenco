@@ -1,0 +1,30 @@
+#banner-page {
+  background-image: url("./page-banner.jpeg");
+  background-position: bottom left;
+  background-size: cover;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  padding-left: 75px;
+  padding-top: 50px;
+  font-size: 30px;
+}
+
+.page-contents {
+  margin-top: 50px
+}
+
+.text-container {
+  margin: 20px 10%;
+  font-size: 18px;
+}
+
+.media-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.media-item {
+  margin: 20px;
+}

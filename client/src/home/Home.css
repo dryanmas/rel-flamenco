@@ -1,0 +1,26 @@
+.heading-container {
+  display: flex;
+  justify-content: center;
+}
+
+#name {
+  font-size: 40px;
+  margin: 40px;
+  text-align: center;
+}
+
+#banner-main {
+  background-image: url("./banner-main.jpeg");
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+}
+
+@media(max-width: 600px) {
+
+  #name {
+    margin-top: 0px;
+    font-size: 35px;
+  }
+
+}

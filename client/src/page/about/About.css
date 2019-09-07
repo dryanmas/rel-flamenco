@@ -1,0 +1,15 @@
+.img-container {
+  margin: 0px 40px;
+  width: 30%;
+  float: right;
+}
+
+#bio-img {
+  width: 100%;
+}
+
+@media(max-width: 850px) {
+  .img-container {
+    display: none;
+  }
+}
