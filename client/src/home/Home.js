@@ -7,10 +7,10 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <div class="heading-container">
+        <div className="heading-container">
           <h1 id="name">ROBERT EARL LONGLEY</h1>
         </div>
-        <div class="banner" id="banner-main"></div>
+        <div className="banner" id="banner-main"></div>
       </>
     );
   }

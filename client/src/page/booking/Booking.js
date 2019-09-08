@@ -20,9 +20,46 @@ class Booking extends React.Component {
     });
   }
 
+  reset() {
+    this.setState({ name: '', email: '', message: '' });
+  }
+
+  displayMessage(type) {
+    const ids = {
+      success: 'form-success',
+      failure: 'form-failure'
+    }
+
+    const message = document.getElementById(ids[type]);
+
+    message.style.display = 'block';
+
+    window.setTimeout(() => {
+      message.style.display = 'none';
+    }, 3000);
+  }
+
   handleSubmit(event) {
-    alert('An email was submitted: ' + this.state);
     event.preventDefault();
+    
+    const emailInput = this.state;
+
+    fetch(`/api/email`, {
+      method: 'post',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify(emailInput)
+    })
+    .then(res => {
+      if (res.status === 200) {
+        this.displayMessage('success');
+        this.reset();
+      } else {
+        this.displayMessage('failure');
+      }
+    })
+    .catch(err => {
+      this.failedSubmit();
+    });
   }
 
   render() {
@@ -30,16 +67,20 @@ class Booking extends React.Component {
       <div className="page-contents text-container">
         <p id="booking-description">Robert Earl Longley performs public and private concerts and events in the Southwest and beyond. Please submit the form below regarding booking and other inquiries.</p>
 
+        <div id="form-message">
+          <p id="form-success">Your message is on its way.</p>
+          <p id="form-failure">Failed to send. Please try again.</p>
+        </div>
         <div id="contact-container">
           <form id="contact" onSubmit={this.handleSubmit}>
             <fieldset>
-              <input name="name" placeholder="Name" type="text" tabindex="1"  onChange={this.handleChange} required autofocus />
+              <input name="name" value={this.state.name} placeholder="Name" type="text" tabIndex="1"  onChange={this.handleChange} required autoFocus />
             </fieldset>
             <fieldset>
-              <input name="email" placeholder="Email Address" type="email" tabindex="2" onChange={this.handleChange} required />
+              <input name="email" value={this.state.email} placeholder="Email Address" type="email" tabIndex="2" onChange={this.handleChange} required />
             </fieldset>
             <fieldset>
-              <textarea name="message" placeholder="Type your message here...." tabindex="5" onChange={this.handleChange} required></textarea>
+              <textarea name="message" value={this.state.message} placeholder="Type your message here...." tabIndex="3" onChange={this.handleChange} required></textarea>
             </fieldset>
             <fieldset>
               <div id="button-container">

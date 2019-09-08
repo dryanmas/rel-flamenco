@@ -14,6 +14,13 @@
   margin-top: 50px
 }
 
+.quote-container.text-container {
+  padding: 0px 10%; 
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+}
+
 .text-container {
   margin: 20px 10%;
   font-size: 18px;

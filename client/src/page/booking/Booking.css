@@ -2,8 +2,27 @@
   margin-top: 50px;
 }
 
+#form-message {
+  height: 20px;
+  padding: 10px;
+}
+
+#form-success, #form-failure {
+  font-size: 20px;
+  display: none;
+}
+
+#form-success {
+  color: #71627a;
+}
+
+
+#form-failure {
+  color:#c10000;
+}
+
 #contact-container {
-  margin: 30px 0px;
+  margin-bottom: 30px;
   display: flex;
 }
 
