@@ -74,7 +74,7 @@ class Booking extends React.Component {
         <div id="contact-container">
           <form id="contact" onSubmit={this.handleSubmit}>
             <fieldset>
-              <input name="name" value={this.state.name} placeholder="Name" type="text" tabIndex="1"  onChange={this.handleChange} required autoFocus />
+              <input name="name" value={this.state.name} placeholder="Name" type="text" tabIndex="1"  onChange={this.handleChange} required />
             </fieldset>
             <fieldset>
               <input name="email" value={this.state.email} placeholder="Email Address" type="email" tabIndex="2" onChange={this.handleChange} required />
