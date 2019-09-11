@@ -9,7 +9,7 @@ class Music extends React.Component {
       <div className="page-contents">
         <div className="quote-container text-container">
           <div>
-            "There's nothing legitimate about what I do. I know I am the bastard child of flamenco and classical guitar, and I prefer it that way."
+            There's nothing legitimate about what I do. I know I am the bastard child of flamenco and classical guitar, and I prefer it that way.
           </div>
         </div>
         <div className="media-container" id="soundcloud"> 

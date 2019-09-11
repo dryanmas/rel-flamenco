@@ -95,7 +95,7 @@ fieldset {
 
 @media(max-width: 1000px) { 
   #contact-container {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
   }
 

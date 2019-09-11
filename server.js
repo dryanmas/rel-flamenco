@@ -10,10 +10,6 @@ server.use(express.json());
 server.use(helmet());
 server.use(express.static(path.join(__dirname, 'client/build')));
 
-server.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build/index.html'));
-});
-
 server.post('/api/email', async (req, res) => {
 
   const email = req.body;

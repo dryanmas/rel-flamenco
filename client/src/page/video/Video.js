@@ -9,7 +9,7 @@ class Video extends React.Component {
       <div className="page-contents">
         <div className="quote-container text-container">
           <div>
-            "Flamenco has always been about intimacy, the connection with the audience. You’re in it with them and they’re in it with you.  "
+            Performing solo guitar is about intimacy, the connection with the audience. You’re in it with them and they’re in it with you.
           </div>
         </div>
         <div className="media-container" id="youtube">
