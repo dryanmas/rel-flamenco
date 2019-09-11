@@ -39,7 +39,7 @@ function sendMail(info) {
   });
 
   const mailOpts = {
-    from: `"${info.name}" <${info.email}>`, // sender address
+    from: `"${info.name}" ${info.email}`, // sender address
     to: process.env.RECEIVER_EMAIL, // list of receivers
     subject: 'Contact/Booking Form', // Subject line
     text: info.message, // plain text body
