@@ -62,7 +62,6 @@ class App extends React.Component {
   }
 
   selectPage = (e) => {
-    this.closeMenu();
     const navButton = e.target;
     const currentPage = document.getElementsByClassName('selected')[0];
 
@@ -70,6 +69,7 @@ class App extends React.Component {
     navButton.classList.add('selected');
 
     this.setState({ selected: navButton.textContent });
+    this.closeMenu();
   }
 
   openMenu = () => {
